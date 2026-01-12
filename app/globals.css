@@ -15,7 +15,10 @@
   --font-poppins: var(--font-poppins);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 * {
   @apply font-poppins
-
 }
