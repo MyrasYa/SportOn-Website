@@ -1,4 +1,4 @@
-Navbar/Header 
+Navbar/Header DONE
 Hero
 Categories
 Products
