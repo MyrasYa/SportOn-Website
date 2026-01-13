@@ -5,12 +5,12 @@ import { FiFastForward } from "react-icons/fi";
 const HeroSection = () => {
   return (
     <section id="hero-section" className="container mx-auto h-screen flex">
-       <Image src="/images/basketball_sport_icon_in_minimalist_3d_render_2 1.svg" alt="basketball-hero" width={432} height={423} className="grayscale absolute -left-0 -top-20 -translate-y-1/2"/>
+       <Image src="/images/basketball_sport_icon_in_minimalist_3d_render_2 1.svg" alt="basketball-hero" width={432} height={423} className="grayscale absolute left-0 -top-250 2xl:left-10 2xl:top-30 2xl:translate-y-1"/>
 
-      <div className="relative self-center ">
-        <div className="w-2/3 relative ml-47 mt-10 flex flex-col 2xl:block justify-center items-center text-center 2xl:text-left 2xl:ml-40 2xl:mt-5">
+      <div className="relative self-center mx-auto ">
+        <div className=" w-full  relative mx-auto mt-1 flex flex-col 2xl:block justify-center items-center text-center 2xl:w-2/3 2xl:text-left 2xl:ml-40 2xl:mt-3 ">
           <div className="text-primary italic">Friday Sale, 50%</div>
-          <h1 className="font-extrabold text-[95px] leading-tight italic bg-gradient-to-b from-black to-[#979797] bg-clip-text text-transparent">
+          <h1 className="font-extrabold text-[65px] leading-tight italic bg-gradient-to-b from-black to-[#979797] bg-clip-text text-transparent  px-2 2xl:text-[95px] ">
             WEAR YOUR <br />
             TOP-QUALITY SPORTSWEAR <br />
           </h1>
@@ -40,7 +40,7 @@ const HeroSection = () => {
         <Image src="/images/img-hero.svg" alt="hero-img" width={805} height={950} className="absolute -right-1 top-1/2 -translate-y-1/2 hidden 2xl:flex 2xl:absolute 2xl:-right-1 2xl:top-1/2 2xl:-translate-y-1/2"/>
       </div>
 
-      <Image src="/images/img-ornament-hero.svg" alt="ornament-hero" width={513} height={420} className="absolute -right-[200px] top-1/2 -translate-y-1/2 hidden 2xl:block"/>
+      <Image src="/images/img-ornament-hero.svg" alt="ornament-hero" width={513} height={420} className="absolute -right-[250px] top-1/2 -translate-y-1/2 hidden 2xl:block"/>
     </section>
   );
 };

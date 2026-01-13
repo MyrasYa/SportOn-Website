@@ -17,7 +17,12 @@
 
 html {
   overflow-x: hidden;
+  box-sizing: border-box;
 }
+
+/* * {
+  border: 2px solid red;
+} */
 
 * {
   @apply font-poppins

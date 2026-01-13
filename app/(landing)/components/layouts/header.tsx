@@ -6,7 +6,7 @@ import { FiSearch } from "react-icons/fi";
 const Header = () => {
   return (
     <header>
-      <div className="flex justify-between items-center gap-10 container mx-auto py-7 ">
+      <div className="flex justify-between items-center gap-10 container mx-auto py-5 2xl:mx-auto ">
         <Image
           src="/images/Logo.svg"
           alt="sporton-logo"
@@ -14,7 +14,7 @@ const Header = () => {
           height={30}
         />
 
-        <nav className="flex gap-40 font-medium">
+        <nav className="flex gap-35 font-medium ">
           <Link
             href="#"
             className="relative after:content-[''] after:block after:rounded-full after:h-[3px] after:w-1/2 after:absolute after:bg-primary after:left-1 after:translate-x-2 after:translate-y-1 after:bottom-0.10 after:scale-0 hover:after:scale-100 after:transition-transform after:duration-300"
