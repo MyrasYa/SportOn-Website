@@ -57,7 +57,7 @@ const Header = () => {
           </div>
 
           {open && (
-            <div className="absolute top-14 right-0 w-xs bg-white shadow-lg z-50 lg:hidden md:right-5">
+            <div className="absolute top-14 right-0 w-xs bg-white shadow-lg z-50 lg:hidden sm:right-5">
               <ul className="flex flex-col gap-4 p-6 text-sm">
                 <li className="hover:text-primary transition">Home</li>
                 <li className="hover:text-primary transition">Shop</li>
