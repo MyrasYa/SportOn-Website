@@ -46,7 +46,7 @@ const CategoriesSection = () => {
             {" "}
             Browse By Categories
           </h2>
-          <div className="flex justify-center items-center gap-1 text-primary hidden sm:flex">
+          <div className="justify-center items-center gap-1 text-primary hidden sm:flex">
             <Link href="#" className="font-medium text-base">
               See All Categories
             </Link>
