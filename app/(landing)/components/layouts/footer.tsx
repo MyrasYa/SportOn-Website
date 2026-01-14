@@ -4,7 +4,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-dark-alternate mt-40 text-white">
-      <div className="container mx-auto flex justify-between pt-14 pb-24">
+      <div className="container mx-auto justify-between pt-14 pb-24 block lg:flex lg:justify-between">
         <div className="w-105">
           <Image
             src="/images/logo-footer.svg"
@@ -18,7 +18,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="w-105 grid grid-cols-2 ">
+        <div className="w-105 grid grid-cols-2 pt-15">
           <div className="flex gap-7 flex-col">
             <Link href="#">Home</Link>
             <Link href="#">Categories</Link>
