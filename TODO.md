@@ -1,5 +1,7 @@
 Navbar/Header DONE
-Hero
-Categories
-Products
-Footer
+Hero DONE
+Categories DONE
+Products DONE
+Footer DONE
+
+PRODUCT DETAIL 

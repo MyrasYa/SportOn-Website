@@ -6,13 +6,14 @@ import { useState } from "react";
 import { FiShoppingBag } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi";
 import { BsCaretDown } from "react-icons/bs";
+import CartPopup from "../ui/cart-popup";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full relative bg-white">
-      <div className="container mx-auto px-5 py-6 sm:px-6  lg:px-8 xl:px-12 h-full flex items-center justify-between">
+    <header className="w-full relative bg-white ">
+      <div className="container mx-auto px-5 py-6 sm:px-6 lg:px-8 xl:px-12 h-full flex items-center justify-between">
         <Image
           src="/images/Logo.svg"
           alt="sporton-logo"
@@ -41,23 +42,36 @@ const Header = () => {
           </Link>
         </nav>
 
-        <div className="flex items-center gap-4 lg:gap-8">
-          <button onClick={() => setOpen(!open)} className="lg:hidden">
+        <div className=" relative flex items-center gap-4 lg:gap-8">
+          <button
+            onClick={() => setOpen(!open)}
+            className="lg:hidden cursor-pointer"
+          >
             <BsCaretDown
               className={`w-8 h-8 transition-all duration-200 
             ${open ? "rotate-180 text-primary" : "hover:text-primary"}`}
             />
           </button>
           <FiSearch className="w-6 h-6 hover:text-primary transition-all duration-150" />
-          <div className="relative">
-            <FiShoppingBag className="w-6 h-6 hover:text-primary transition-all duration-150" />
+
+          <button
+            onClick={() => setOpen(!open)}
+            className="relative cursor-pointer"
+          >
+            <FiShoppingBag
+              className={`w-6 h-6 transition-all duration-200 ease-in-out ${open ? "text-primary" : "hover:text-primary "}`}
+            />
             <div className="absolute bg-primary rounded-full w-3.5 h-3.5 bottom-3.5 left-3 opacity-[.90] text-[11px] text-white text-center">
               3
             </div>
-          </div>
+          </button>
 
+          <CartPopup
+            className={`absolute right-0 transition-all duration-400 ease-out z-50
+            ${open ? "top-14 opacity-100 translate-y-0" : "top-0 opacity-0 -translate-y-4 pointer-events-none"}`}
+          />
           {open && (
-            <div className="absolute top-14 right-0 w-xs bg-white shadow-lg z-50 lg:hidden sm:right-5">
+            <div className="absolute top-14 right-0 w-xs bg-white shadow-lg z-50 lg:hidden">
               <ul className="flex flex-col gap-4 p-6 text-sm">
                 <li className="hover:text-primary transition">Home</li>
                 <li className="hover:text-primary transition">Shop</li>
