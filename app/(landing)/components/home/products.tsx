@@ -64,16 +64,16 @@ const ProductsImage = [
 
 const ProductSection = () => {
   return (
-    <section id="product-section" className="container mx-auto mt-35">
+    <section id="product-section" className="container mx-auto mt-35 mb-40">
       <h2 className="font-bold italic text-4xl text-center mb-13">
         <span className="text-primary">OUR</span> PRODUCT
       </h2>
 
       {/* Products */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 ">
         {
             ProductsImage.map((products, index) => (
-                <Link href="#" key={index} className="p-1.5 bg-white hover:drop-shadow-2xl duration-150 transition-all">
+                <Link href={`/product/${products.name}`} key={index} className="p-1.5 bg-white hover:drop-shadow-2xl duration-150 transition-all">
                     <div className="bg-primary-light aspect-square w-full flex justify-center items-center relative">
                         <Image src={`/images/products/${products.imgUrl}`}  alt={products.name} width={300} height={300} className="aspect-square" />
                         <Button className="w-10 h-10 p-2! absolute right-3 top-3"><FiPlus size={24} /></Button>

@@ -1,9 +1,12 @@
+"use client";
+
 import priceFormatter from "@/app/utils/price-formatter";
 import Image from "next/image";
 import Button from "./button";
 import { FiArrowRight, FiTrash2 } from "react-icons/fi";
+import { useRouter } from "next/dist/client/components/navigation";
 
-const cartList = [
+export const cartList = [
   {
     name: "SportsOn Hyperfast Shoes",
     type: "Running",
@@ -26,12 +29,18 @@ const cartList = [
     price: 199000,
     qty: 3,
     imgUrl: "3.svg",
-  },
+  }
 ];
 
 interface CartPopupProps extends React.HTMLAttributes<HTMLDivElement> {className?: string;}
 
 const CartPopup = ({ className }: CartPopupProps) => {
+
+  const {push} = useRouter();
+
+  const checkout = () => {
+    push("/checkout");
+  } 
     
   const totalprice = cartList.reduce((all, item) => all + item.price * item.qty, 0);
 
@@ -72,7 +81,7 @@ const CartPopup = ({ className }: CartPopupProps) => {
           <div className="text-md">Total</div>
           <div className="text-primary text-sm">{priceFormatter(totalprice)}</div>
         </div>
-        <Button className="w-full mt-4 px-10" variant="dark">Checkout Now
+        <Button className="w-full mt-4 px-10" variant="dark" onClick={checkout}>Checkout Now
             <FiArrowRight size={20}/>
         </Button>
       </div>

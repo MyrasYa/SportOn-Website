@@ -7,9 +7,15 @@ import {
 } from "react-icons/fi";
 import Button from "../ui/button";
 import { useState } from "react";
+import { useRouter } from "next/dist/client/components/navigation";
 
 const ProductActions = () => {
+  const {push} = useRouter();
   const [qty, setQty] = useState(1);
+
+  const checkout = () => {
+    push("/checkout");
+  }
 
   return (
     <div className="flex gap-5">
@@ -33,13 +39,13 @@ const ProductActions = () => {
         </div>
       </div>
 
-      <Button className="px-20 w-full ">
+      <Button className="w-[17rem] " >
         <FiShoppingBag size={24} />
         Add to Cart
       </Button>
-      <Button className="px-20 w-full " variant="dark">
-        <FiArrowRight size={24} />
+      <Button className="w-[17rem] " variant="dark" onClick={checkout}>
         Checkout Now
+        <FiArrowRight size={24} />
       </Button>
     </div>
   );

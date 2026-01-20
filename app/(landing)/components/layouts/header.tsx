@@ -15,12 +15,14 @@ const Header = () => {
   return (
     <header className="w-full relative bg-white ">
       <div className="container mx-auto px-5 py-6 sm:px-6 lg:px-8 xl:px-12 h-full flex items-center justify-between">
-        <Image
-          src="/images/Logo.svg"
-          alt="sporton-logo"
-          width={127}
-          height={30}
-        />
+        <Link href="/">
+          <Image
+            src="/images/Logo.svg"
+            alt="sporton-logo"
+            width={127}
+            height={30}
+          />
+        </Link>
 
         <nav className="hidden lg:flex gap-8 font-medium items-center lg:gap-25">
           <Link
