@@ -56,7 +56,7 @@ const Header = () => {
           <FiSearch className="w-6 h-6 hover:text-primary transition-all duration-150" />
 
           <button
-            onClick={() => setOpen(!cartOpen)}
+            onClick={() => setCartOpen(!cartOpen)}
             className="relative cursor-pointer"
           >
             <FiShoppingBag
