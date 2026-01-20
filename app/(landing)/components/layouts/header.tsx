@@ -10,6 +10,7 @@ import CartPopup from "../ui/cart-popup";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
 
   return (
     <header className="w-full relative bg-white ">
@@ -55,11 +56,11 @@ const Header = () => {
           <FiSearch className="w-6 h-6 hover:text-primary transition-all duration-150" />
 
           <button
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen(!cartOpen)}
             className="relative cursor-pointer"
           >
             <FiShoppingBag
-              className={`w-6 h-6 transition-all duration-200 ease-in-out ${open ? "text-primary" : "hover:text-primary "}`}
+              className={`w-6 h-6 transition-all duration-200 ease-in-out ${cartOpen ? "text-primary" : "hover:text-primary "}`}
             />
             <div className="absolute bg-primary rounded-full w-3.5 h-3.5 bottom-3.5 left-3 opacity-[.90] text-[11px] text-white text-center">
               3
@@ -68,7 +69,7 @@ const Header = () => {
 
           <CartPopup
             className={`absolute right-0 transition-all duration-400 ease-out z-50
-            ${open ? "top-14 opacity-100 translate-y-0" : "top-0 opacity-0 -translate-y-4 pointer-events-none"}`}
+            ${cartOpen ? "top-14 opacity-100 translate-y-0" : "top-0 opacity-0 -translate-y-4 pointer-events-none"}`}
           />
           {open && (
             <div className="absolute top-14 right-0 w-xs bg-white shadow-lg z-50 lg:hidden">
