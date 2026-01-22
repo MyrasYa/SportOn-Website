@@ -7,13 +7,16 @@ import { FiShoppingBag } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi";
 import { BsCaretDown } from "react-icons/bs";
 import CartPopup from "../ui/cart-popup";
+import { useCartStore } from "@/app/hooks/use-cart-store";
 
 const Header = () => {
+  const { items } = useCartStore();
+
   const [open, setOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
 
   return (
-    <header className="w-full relative bg-white ">
+    <header className="fixed w-full z-50 backdrop-blur-[30px] bg-white/50">
       <div className="container mx-auto px-5 py-6 sm:px-6 lg:px-8 xl:px-12 h-full flex items-center justify-between">
         <Link href="/">
           <Image
@@ -64,9 +67,13 @@ const Header = () => {
             <FiShoppingBag
               className={`w-6 h-6 transition-all duration-200 ease-in-out ${cartOpen ? "text-primary" : "hover:text-primary "}`}
             />
-            <div className="absolute bg-primary rounded-full w-3.5 h-3.5 bottom-3.5 left-3 opacity-[.90] text-[11px] text-white text-center">
-              3
-            </div>
+            {items.length ? (
+              <div className="absolute bg-primary rounded-full w-3.5 h-3.5 bottom-3.5 left-3 opacity-[.90] text-[11px] text-white text-center">
+                {items.length}
+              </div>
+            ) : (
+              <></>
+            )}
           </button>
 
           <CartPopup

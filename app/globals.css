@@ -31,7 +31,7 @@ html {
 
 /* Input-Group */
 .input-group {
-  @apply mb-5
+  @apply mb-1
 }
 
 .input-group label {

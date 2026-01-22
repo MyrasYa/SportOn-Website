@@ -1,40 +1,46 @@
 import Link from "next/link";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
+import { Category } from "@/app/types";
+import { getImageUrl } from "@/app/lib/api";
 
-const categoriesImage = [
-  {
-    name: "Running",
-    imgUrl: "category-running.svg",
-  },
+// const categoriesImage = [
+//   {
+//     name: "Running",
+//     imgUrl: "category-running.svg",
+//   },
 
-  {
-    name: "Tennis",
-    imgUrl: "category-raket.svg",
-  },
+//   {
+//     name: "Tennis",
+//     imgUrl: "category-raket.svg",
+//   },
 
-  {
-    name: "Basketball",
-    imgUrl: "category-basketball.svg",
-  },
+//   {
+//     name: "Basketball",
+//     imgUrl: "category-basketball.svg",
+//   },
 
-  {
-    name: "Football",
-    imgUrl: "category-football.svg",
-  },
+//   {
+//     name: "Football",
+//     imgUrl: "category-football.svg",
+//   },
 
-  {
-    name: "Badminton",
-    imgUrl: "category-badminton.svg",
-  },
+//   {
+//     name: "Badminton",
+//     imgUrl: "category-badminton.svg",
+//   },
 
-  {
-    name: "Swimming",
-    imgUrl: "category-swimming.svg",
-  },
-];
+//   {
+//     name: "Swimming",
+//     imgUrl: "category-swimming.svg",
+//   },
+// ];
 
-const CategoriesSection = () => {
+type TCategoriesProps = {
+  categories: Category[];
+}
+
+const CategoriesSection = ({categories}: TCategoriesProps) => {
   return (
     <section
       id="category-section"
@@ -56,14 +62,14 @@ const CategoriesSection = () => {
 
         {/* Categories Section */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 sm:gap-6 2xl:gap-16 mt-7">
-          {categoriesImage.map((categories, index) => (
+          {categories.map((categories) => (
             <div
               className="rounded-lg bg-linear-to-r from-[#F1F1F1] to-[#F7F7F7] aspect-square w-full flex justify-center px-5 py-5 mx-auto"
-              key={index}
+              key={categories._id}
             >
               <div className="self-center">
                 <Image
-                  src={`/images/categories/${categories.imgUrl}`}
+                  src={getImageUrl(categories.imageUrl)}
                   width={80}
                   height={80}
                   alt={categories.name}
