@@ -11,6 +11,6 @@ export const transactionCheckout = async (form: FormData): Promise<Transaction> 
 
 export const getTransactionById = async (id: string): Promise<Transaction> => {
     const res = await fetchAPI<Transaction>(`/transactions/${id}`);
-    console.log("transactionsId: ", res)
+    // console.log("transactionsId: ", res)
     return res;
 }

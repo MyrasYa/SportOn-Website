@@ -30,7 +30,7 @@ const Button = ({
 
   const sizes = {
     normal: "py-4 px-9",
-    small: "py-[12px] px-7",
+    small: "py-4 px-5",
   };
 
   return (

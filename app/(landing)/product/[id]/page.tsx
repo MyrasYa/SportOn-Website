@@ -1,7 +1,6 @@
 import priceFormatter from "@/app/utils/price-formatter";
 import ProductActions from "../../components/product-detail/product-actions";
 import Image from "next/image";
-import { get } from "http";
 import { getProductDetail } from "@/app/services/product.service";
 import { getImageUrl } from "@/app/lib/api";
 

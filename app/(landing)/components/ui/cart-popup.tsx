@@ -39,16 +39,12 @@ interface CartPopupProps extends React.HTMLAttributes<HTMLDivElement> {className
 const CartPopup = ({ className }: CartPopupProps) => {
 
   const {push} = useRouter();
-
   const {items, removeItem} = useCartStore();
-
-  console.log("Cart item: ", items)
-
-  const checkout = () => {
+  const handleCheckout = () => {
     push("/checkout");
   } 
-    
   const totalprice = items.reduce((all, item) => all + item.price * item.qty, 0);
+  // console.log("Cart item: ", items)
 
   return (
     <div className={`bg-white shadow-xl shadow-black/10 border border-gray-200 w-95 z-50 ${className}`}>
@@ -92,7 +88,7 @@ const CartPopup = ({ className }: CartPopupProps) => {
           <div className="text-md">Total</div>
           <div className="text-primary text-sm">{priceFormatter(totalprice)}</div>
         </div>
-        <Button className="w-full mt-4 px-10" variant="dark" onClick={checkout}>Checkout Now
+        <Button className="w-full mt-4 px-10" variant="dark" onClick={handleCheckout}>Checkout Now
             <FiArrowRight size={20}/>
         </Button>
       </div>

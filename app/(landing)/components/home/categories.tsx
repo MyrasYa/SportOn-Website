@@ -100,5 +100,3 @@ const CategoriesSection = ({categories}: TCategoriesProps) => {
 
 export default CategoriesSection;
 
-// container mx-auto mt-40
-// section clsn lama
