@@ -2,7 +2,7 @@ type TButtonProps = {
   children: React.ReactNode;
   className?: string;
   variant?: "primary" | "dark" | "ghost";
-  size?: "normal" | "small";
+  size?: "normal" | "small" | "verysmall";
   gap?: "normal" | "long";
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -31,6 +31,7 @@ const Button = ({
   const sizes = {
     normal: "py-4 px-9",
     small: "py-4 px-5",
+    verysmall: "py-2 px-5"
   };
 
   return (
