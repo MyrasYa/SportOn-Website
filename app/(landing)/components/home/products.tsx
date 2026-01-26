@@ -93,14 +93,14 @@ const ProductSection = ({products}: TProductsProps) => {
             products.map((products) => (
                 <Link href={`/product/${products._id}`} key={products._id} className="p-1.5 bg-white hover:drop-shadow-2xl duration-150 transition-all">
                     <div className="bg-primary-light aspect-square w-full flex justify-center items-center relative">
-                        <Image src={getImageUrl(products.imageUrl)}  alt={products.name} width={250} height={150} className="aspect-square" />
+                        <Image src={getImageUrl(products.imageUrl)}  alt={products?.name} width={250} height={150} className="aspect-square" />
                         <Button onClick={(e) => handleAddtoCart(e, products)} className="w-10 h-10 p-2! absolute right-3 top-3"><FiPlus size={24} /></Button>
                     </div>
 
-                    <h3 className="font-medium text-lg mb-1.5 mt-4">{products.name}</h3>
+                    <h3 className="font-medium text-lg mb-1.5 mt-4">{products?.name}</h3>
 
                     <div className="flex justify-between mb-8">
-                        <div className="text-gray-500">{products.category.name}</div>
+                        <div className="text-gray-500">{products.category?.name}</div>
                         <div className="text-primary font-medium">{priceFormatter(products.price)}</div>
                     </div>
                 </Link>
