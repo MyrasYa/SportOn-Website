@@ -74,7 +74,7 @@ const ProductModal = ({ isOpen, onClose }: TProductModalProps) => {
             name="description"
             id="description"
             rows={7}
-            placeholder="Product Details..."
+            placeholder="Product Details ..."
           ></textarea>
         </div>
         <Button className="ml-auto mt-3 rounded-lg">Create Product</Button>
@@ -84,3 +84,6 @@ const ProductModal = ({ isOpen, onClose }: TProductModalProps) => {
 };
 
 export default ProductModal;
+
+
+// 1.15

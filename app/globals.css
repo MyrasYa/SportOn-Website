@@ -49,13 +49,13 @@ html {
 }
 
 .input-group-admin label {
-  @apply block text-lg font-medium mb-2.5
+  @apply block text-lg font-medium mb-2
 }
 
 .input-group-admin input,
 .input-group-admin select,
 .input-group-admin textarea {
-  @apply px-4 py-2.5 border border-gray-300 rounded-sm w-full outline-none focus:border focus:border-gray-500 mb-3 text-lg
+  @apply px-4 py-2 border border-gray-300 rounded-sm w-full outline-none focus:border focus:border-gray-500 mb-3 text-lg
 }
 
 .input-group-admin input::placeholder {

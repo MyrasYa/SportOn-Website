@@ -4,9 +4,9 @@ import { FiUploadCloud } from "react-icons/fi";
 
 type TImageUploadProps = {
   label?: string;
-  value?: string;
+  value?: string | null;
   onChange: (file: File) => void;
-  className: string;
+  className?: string;
 };
 
 const ImagePreview = ({
@@ -33,7 +33,7 @@ const ImagePreview = ({
         <h3 className="font-medium text-lg mb-2">Product Image</h3>
       <div
         onClick={handleImageClick}
-        className="h-[260px] border-2 border-dashed border-primary bg-primary/5 rounded-lg flex flex-col justify-center items-center"
+        className="h-[238px] border-2 border-dashed border-primary bg-primary/5 rounded-lg flex flex-col justify-center items-center"
       >
         {value ? (
           <Image
