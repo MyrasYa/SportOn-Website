@@ -5,17 +5,17 @@ import { FiFastForward } from "react-icons/fi";
 const HeroSection = () => {
   return (
     <section id="hero-section" className="container mx-auto h-screen flex ">
-       <Image src="/images/basketball_sport_icon_in_minimalist_3d_render_2 1.svg" alt="basketball-hero" width={432} height={423} className="grayscale absolute left-0 -top-250 2xl:left-10 2xl:top-30 2xl:translate-y-1"/>
+       <Image src="/images/basketball_sport_icon_in_minimalist_3d_render_2 1.svg" alt="basketball-hero" width={430} height={420} className="grayscale absolute left-0 top-250 2xl:block 2xl:left-[55px] 2xl:top-20 2xl:translate-y-1 hidden"/>
 
       <div className=" relative mx-auto 2xl:self-center mt-13">
         <div className=" w-full px-4 relative mx-auto mt-20 sm:mt-28 flex flex-col justify-center items-center text-center 2xl:block 2xl:w-2/3 2xl:text-left 2xl:ml-40 2xl:mt-3">
-          <div className="text-primary italic">Friday Sale, 50%</div>
-          <h1 className="font-extrabold text-[38px] sm:text-[48px] lg:text-[65px] leading-tight italic bg-gradient-to-b from-black to-[#979797] bg-clip-text text-transparent px-2 2xl:text-[95px] ">
+          <div className="text-primary italic bg-primary-light border border-primary-light rounded-full w-fit px-3 py-2 ml-4">Friday Sale, 50%</div>
+          <h1 className="font-extrabold text-[38px] sm:text-[48px] lg:text-[65px] leading-tight italic bg-gradient-to-b from-black to-[#979797] bg-clip-text text-transparent pr-4 2xl:text-[95px]">
             WEAR YOUR <br />
             TOP-QUALITY SPORTSWEAR <br />
           </h1>
 
-          <p className="mt-6 w-full max-w-[550px] leading-loose px-4 sm:px-0">
+          <p className="mt-6 w-full max-w-[550px] leading-loose px-4 ml-1 sm:px-0">
             Engineered for endurance and designed for speed. Experience gear
             that moves as fast as you do. Premium fabrics. Unmatched comfort.
             Limitless motion.
