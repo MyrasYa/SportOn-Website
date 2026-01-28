@@ -38,7 +38,7 @@ const Footer = () => {
           <div className="mr-8">SportsOn © 2025 All Rights Reserverd.</div>
           <div className="grid grid-cols-2 w-full sm:w-105 ">
             <Link href="#" className="mr-2 hover:text-primary duration-150">Privacy Policy</Link>
-            <Link href="#" className="mr-4 hover:text-primary duration-150">Terms Conditions</Link>
+            <Link href="#" className="mr-4 hover:text-primary duration-150">Terms Condition</Link>
           </div>
         </div>
       </div>
