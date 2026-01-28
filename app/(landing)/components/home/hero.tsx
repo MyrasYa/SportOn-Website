@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className=" relative mx-auto 2xl:self-center mt-8">
         <div className=" w-full px-4 relative mx-auto mt-20 sm:mt-28 flex flex-col justify-center items-center text-center 2xl:block 2xl:w-2/3 2xl:text-left 2xl:ml-40 2xl:mt-3">
           <div className="text-primary/70 italic bg-primary-light border border-primary/15 rounded-full w-fit px-3 py-1.5 mb-2 mx-auto 2xl:ml-4">Friday Sale, 50%</div>
-          <h1 className="font-extrabold text-[38px] sm:text-[48px] lg:text-[65px] leading-tight italic bg-gradient-to-b from-black to-[#979797] bg-clip-text text-transparent pr-4 2xl:text-[95px] mx-auto 2xl:ml-1">
+          <h1 className="font-extrabold text-[38px] sm:text-[48px] lg:text-[65px] leading-tight italic bg-gradient-to-b from-black to-[#979797] bg-clip-text text-transparent pr-4 2xl:text-[95px] mx-auto 2xl:ml-0">
             WEAR YOUR <br />
             TOP-QUALITY SPORTSWEAR <br />
           </h1>
@@ -21,7 +21,7 @@ const HeroSection = () => {
             Limitless motion.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-5 mt-6  items-center sm:items-start mx-auto 2xl:ml-2">
+          <div className="flex flex-col sm:flex-row gap-5 mt-9 items-center sm:items-start mx-auto 2xl:ml-2">
             <Button>
               Explore More <FiFastForward />
             </Button>
